@@ -13,6 +13,7 @@ from modules.checking import async_while_true
 from checking_nfts.check_holder import fetch_data
 
 mongo_key = ""
+discord_token = ""
 
 instruction = """1. Connect your wallet and discord account 
 Website: https://diplosverification.vercel.app/
@@ -196,7 +197,7 @@ async def main():
     except:
         print("[-] MongoDB connection failed")
         return
-    await bot.start("MTE0MDk0OTU5NTg3NTE4NDY0MA.GmCcwj.r31q3-OiRTu3iJa8wDn8216K0dYLUd9eRHzq0k")
+    await bot.start(discord_token)
     print("[+] Started holder verification bot")
 
 if __name__ == '__main__':
