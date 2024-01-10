@@ -11,7 +11,7 @@ from database.collection import get_guild_information, get_all_tokens_by_id
 
 async def async_while_true(guild: discord.Guild):
     mongo_client = MongoClient(
-        "mongodb+srv://deryplos:0AwyF3G51kegwjf8@cluster0.3zzwmsy.mongodb.net/?retryWrites=true&w=majority",
+        mongo_token,
         tlsCAFile=certifi.where())
 
     while True:
